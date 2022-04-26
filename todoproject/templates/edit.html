@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block title %}Edit Data{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6" style="margin: 0 auto;">
+      <form action="/update/{{id}}">
+        <div class="form-group">
+          <label for="firstname">firstname</label>
+          <input type="text" class="form-control" id="firstname" name="firstname" value={{firstname}}>
+        </div>
+        <div class="form-group">
+          <label for="secondname">Secondname</label>
+          <input type="text" class="form-control" id="secondname" name="secondname" value={{secondname}}>
+        </div>
+        <div class="form-group">
+          <label for="job">Job description</label>
+          <textarea class="form-control" id="job" name="job" rows="3">{{job}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin: 0 auto;display: block;">Update</button>
+      </form>
+      </div>
+      </div>
+{% endblock %}

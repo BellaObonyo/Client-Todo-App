@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block title %}All Todo's{% endblock %}
+{% block content %}
+{% for eachtodo in alltodos %}
+<div class="row">
+    <div class="col-md-6" style="margin:0 auto;">
+        <div class="card container-fluid" style="margin-top: 1rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{eachtodo.firstname}} {{eachtodo.secondname}}</h5>
+              <p class="card-text">{{eachtodo.job}}</p>
+              <p class="card-text">{{eachtodo.created_at}}</p>
+              
+              <a href="/delete/{{eachtodo.id}}" class="btn btn-danger">Delete</a>
+              <a href="/edit/{{eachtodo.id}}" class="btn btn-warning">Edit</a>
+
+
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
